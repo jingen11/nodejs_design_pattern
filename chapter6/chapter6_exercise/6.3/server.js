@@ -68,9 +68,9 @@ function consumeChunk(socket) {
     chunk = Buffer.concat([decipher.update(chunk), decipher.final()]);
 
     channels[channel].write(chunk);
-    console.log(socket.readableLength);
 
     if (socket.readableLength > 0) {
+      // as the socket might concatenate the stream from client when we are sending multiple files, the chunk is not emptied, we need to call this function recursively to consume all of the data in the chunk
       consumeChunk(socket);
     }
   }

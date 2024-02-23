@@ -57,7 +57,7 @@ const socket = connect(3000, async () => {
             outBuff.writeUint32BE(chunk.length, 18);
             chunk.copy(outBuff, 22);
             console.log(outBuff);
-            socket.write(outBuff);
+            socket.write(outBuff); // Socket write is not waiting for any write to complete. There are chances where different files buffer might be mixed up into one socket write. Server code will handle it.
           }
         })
         .on("end", () => {
