@@ -12,6 +12,7 @@
   "dependencies": {
     "chance": "^1.1.11",
     "csv-parse": "^5.5.3",
+    "level": "^8.0.1",
     "mkdirp": "^3.0.1",
     "pumpify": "^2.0.1",
     "slug": "^8.2.3",
