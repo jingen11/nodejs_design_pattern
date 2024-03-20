@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "autocannon": "^7.15.0",
     "chance": "^1.1.11",
     "csv-parse": "^5.5.3",
     "ini": "^4.1.2",
